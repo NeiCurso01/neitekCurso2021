@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 01</title>
+</head>
+<body>
+     <script type="text/javascript">
+     	 var nombre, edad, resA = "", resB = "";
+
+     	 nombre = prompt("¿Cuál es tu nombre?", "¿?");
+
+     	 edad = confirm("¿Eres mayor de edad?");
+
+     	 if (edad){
+     	 	resA = prompt("¿Cuál es tu película favorita?", "¿?");
+     	 }else{
+     	 	resB = prompt("¿Cuál es tu caricatura favorita?", "¿?");
+     	 }
+
+     	 alert("Resumen de resultados: \n" + nombre + "\n" + resA + "\n" + resB);
+     </script>
+</body>
+</html>
