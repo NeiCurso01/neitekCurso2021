@@ -8,7 +8,14 @@
 </head>
 <body>
     <script>
-            alert(`Hola Mundo, Incluyendo 'Comilla Simple' y "Comilla Doble"`);
+        const name=prompt("Como te llamas?");
+        if((confirm("Eres mayor de edad?"))){
+            const movie = prompt("Cual es tu pelicula favorita?");
+            alert(`Eres ${name}, eres mayor de edad y tu pelicula favorita es ${movie}`);
+        }else{
+            const cartoon = prompt("Cual es tu caricatura favorita?");
+            alert(`Eres ${name}, menor de edad, tu caricatura favorita es ${cartoon}`);
+        }
         
     </script>
 </body>
