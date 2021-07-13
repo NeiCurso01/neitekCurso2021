@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>There are two different ways to access an object property:</p>
+<p>You can use .property or ["property"].</p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+var person = {
+    firstname:"John",
+    lastname:"Doe",
+    age:50,
+    eyecolor:"blue"
+};
+
+//first way
+document.getElementById("demo1").innerHTML =
+person.firstname + " is " + person.age + " years old.";
+
+//second way
+document.getElementById("demo2").innerHTML =
+person["firstname"] + " is " + person["age"] + " years old.";
+
+//third way
+var x="age";
+document.getElementById("demo3").innerHTML =
+person["firstname"] + " is " + person[x] + " years old.";
+
+</script>
+
+</body>
+</html>

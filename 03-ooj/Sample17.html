@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+var address = {
+  street: "No Street",
+  city:   "No City", 
+  state:  "No State",
+  
+  get getAddress ()
+  {
+    return this.street + ", " + this.city + ", " + this.state;
+  },
+
+  set setAddress(theAddress)
+  {
+    var parts = theAddress.toString().split (", ");
+    this.street = parts[0] || "" ;
+    this.city   = parts[1] || "" ;
+    this.state  = parts[2] || "" ;
+  },
+
+  get getStreet ()
+  {
+    return this.street;
+  },
+  set setStreet (aValue)
+  {
+    this.street = aValue;
+  },
+
+}
+
+address.setAddress = "123 Main St, Austin, Tx" ;
+document.write (" the address? " +  address.getAddress  + "<br/>");
+
+address.setStreet = "1234 Main St";
+document.write (" the street? " +  address.getStreet  + "<br/>");
+
+</script>
+
+</body>
+</html>

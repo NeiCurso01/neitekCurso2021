@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>You can add new properties to existing objects.</p>
+
+<script>
+
+var myF = function (x) {
+   alert('Hola Mundo');
+   console.log ("arg.len=" + arguments.length);
+   console.log ("arg[0]=" + arguments[0]);
+   console.log (arguments.callee);
+}
+
+myF(421);
+console.dir (myF.constructor);
+console.dir (myF.prototype);
+
+</script>
+
+</body>
+</html>

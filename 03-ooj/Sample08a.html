@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+/*
+var person = {
+    firstName:"John",
+    lastName: "Doe",
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    }
+}
+var myObject = {
+    firstName:"Mary",
+    lastName: "Doe",
+}
+x = person.fullName.apply(myObject); 
+document.getElementById("demo").innerHTML = x; 
+*/
+
+//----------
+function Person(name) {
+  this.name = name;
+}
+
+Person.prototype.toSource = function Person_toSource() {
+  return 'new Person(' + (this.name) + ')';
+};
+
+var joe = new Person('Joe');
+document.getElementById("demo").innerHTML = joe.toSource();  
+
+document.getElementById("demo1").innerHTML = joe.toString();  
+
+
+Person.prototype.valueOf = function () { return this.name; };
+document.getElementById("demo2").innerHTML = joe.valueOf();  
+
+</script>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+//-------
+
+function A_Object() {
+  this.name = "A";
+  this.sayHi = function() {
+    return "Hi, I'm " + this.name;
+  }
+}
+
+function B_Object (aName){
+  this.name = aName;
+}
+
+B_Object.prototype = new A_Object();
+B_Object.prototype.constructor = B_Object;
+
+a = new A_Object();
+b = new B_Object("B");
+
+document.write (a.sayHi() + "<br/>");
+document.write (b.sayHi() + "<br/>");
+
+//---------
+
+</script>
+
+</body>
+</html>
+

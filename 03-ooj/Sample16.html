@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+document.write ("<br/>");
+document.write ("*** getters and setters (way 4) "+ "<br/>");
+
+var school = {
+  name:  'N/A',
+  state: 'N/A',
+
+  getName: function() {
+    return this.name;
+  },
+  setName: function(val) {
+    this.name = val;
+  },
+  getState: function() {
+    return this.state;
+  },
+  setState: function(val) {
+    this.state = val;
+  }
+}
+school.name = "Harvard";
+school.state = "Massachusetts";
+
+document.write (" school?  " +  school.name + ", " + school.state +  "<br/>");
+
+ 
+
+</script>
+
+</body>
+</html>

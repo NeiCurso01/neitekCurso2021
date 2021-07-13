@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+//-------
+
+
+
+//---------
+
+class A_Class {
+  constructor (name) {
+    this.name = name;
+  }
+  toString(){
+   return  "A Class name  is: " + this.name;
+  }
+  static getInstance() {
+     return new A_Class("A");
+  }
+}
+class B_Class extends A_Class{
+  constructor (name, otherValue) {
+    super (name);
+    this.otherValue = otherValue;
+  }
+  toString(){
+   return  "B Class name is: " + this.name 
+           + " otherValue: " + this.otherValue;
+  }
+}
+var aClass = A_Class.getInstance();
+var bClass = new B_Class ("Sam", "super!");
+document.write(aClass.toString() + "<br/>");
+document.write(bClass.toString() + "<br/>");
+
+ 
+</script>
+
+</body>
+</html>
+
