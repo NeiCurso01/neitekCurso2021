@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Eventos</h2>
+
+
+
+<script>
+// Función externa
+function mensaje() {
+  alert('Gracias por pinchar');
+}
+ 
+// Asignar la función externa al elemento
+window.onload = function() {
+document.getElementById("btn1").onclick = mensaje;
+}
+</script>
+ 
+<input id="btn1" type="button" value="Pinchame y verás" />
+
+
+</body>
+</html>

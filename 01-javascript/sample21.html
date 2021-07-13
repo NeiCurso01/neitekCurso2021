@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script>
+
+  function valores()
+  {
+    var valor1 = document.getElementById("texto").value;
+  
+    var valor2 = document.getElementById("parrafo").value;
+
+    var elementos = document.getElementsByName("pregunta");
+ 
+    for(var i=0; i<elementos.length; i++) {
+      alert(" Elemento: " + elementos[i].value + "\n Seleccionado: " + elementos[i].checked);
+    }
+
+    var elemento = document.getElementById("condiciones");
+    alert(" Elemento: " + elemento.value + "\n Seleccionado: " + elemento.checked);
+     
+    elemento = document.getElementById("privacidad");
+    alert(" Elemento: " + elemento.value + "\n Seleccionado: " + elemento.checked);
+  
+
+    // Obtener la referencia a la lista
+    var lista = document.getElementById("opciones");
+     
+    // Obtener el índice de la opción que se ha seleccionado
+    var indiceSeleccionado = lista.selectedIndex;
+    // Con el índice y el array "options", obtener la opción seleccionada
+    var opcionSeleccionada = lista.options[indiceSeleccionado];
+     
+    // Obtener el valor y el texto de la opción seleccionada
+    var textoSeleccionado = opcionSeleccionada.text;
+    var valorSeleccionado = opcionSeleccionada.value;
+     
+    alert("Opción seleccionada: " + textoSeleccionado + "\n Valor de la opción: " + valorSeleccionado);
+  }
+
+  alert (window.location);
+ </script>
+</head> 
+
+<body>
+
+    <h2>Formularios</h2>
+
+    <form name="formulario">
+
+        <input type="text" id="texto" />
+        <textarea id="parrafo"></textarea>
+
+        <input type="radio" value="si" name="pregunta" id="pregunta_si"/> SI
+        <input type="radio" value="no" name="pregunta" id="pregunta_no"/> NO
+        <input type="radio" value="nsnc" name="pregunta" id="pregunta_nsnc"/> NS/NC
+
+
+        <input type="checkbox" value="condiciones" name="condiciones" id="condiciones"/> He leído y acepto las condiciones
+        <input type="checkbox" value="privacidad" name="privacidad" id="privacidad"/> He leído la política de privacidad
+
+        <select id="opciones" name="opciones">
+          <option value="1">Primer valor</option>
+          <option value="2">Segundo valor</option>
+          <option value="3">Tercer valor</option>
+          <option value="4">Cuarto valor</option>
+        </select>
+
+    </form>
+</body>
+</html>
+
+

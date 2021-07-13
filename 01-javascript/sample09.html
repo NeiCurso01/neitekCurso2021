@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+    <script type="text/javascript">
+
+
+    var points = [40, 100, 1, 5, 25, 10];
+
+    function myArrayMax(arr) {
+        return Math.max.apply(null, arr);
+    } 
+
+    var res = myArrayMax(points);
+
+    document.writeln("max: " + res + "<br/>"); 
+
+    function myArrayMax2(arr) {
+        var len = arr.length
+        var max = -Infinity;
+        while (len--) {
+            if (arr[len] > max) {
+                max = arr[len];
+            }
+        }
+        return max;
+    } 
+    var res = myArrayMax2(points);
+
+    document.writeln("max: " + res + "<br/>"); 
+
+    </script>
+ </HEAD>
+ <BODY> 
+ </BODY>
+</HTML>

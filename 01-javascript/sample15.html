@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Funciones</h2>
+
+<script>
+/*
+//------- parametro
+
+ function sayHello (msg)
+ {
+    alert ("Hello " + msg);
+ }
+ sayHello ("World!");
+
+//-------- return
+
+ function suma (num1, num2) {
+    var resultado = num1 + num2;
+    return resultado;
+ }
+ var numero1 = 5;
+ var numero2 = 6;
+ var suma = suma (numero1, numero2);
+
+ alert (suma);
+
+//------- Como variable
+
+var hola = function (msg) {
+   alert('Hola ' + msg);
+}
+
+hola('Mundo');
+
+
+//------- funciones a funciones
+
+var mostrar = function(que) {
+   que('funcion mostrar');
+}
+
+var hola = function (quien) {
+   alert('Hola '+quien);
+}
+
+mostrar(hola);  // "Hola funcion mostrar"
+
+ 
+//---- pasando funciones
+function hacerAlgo() {
+   alert('diste click!');
+}
+
+document.onclick=hacerAlgo;
+ 
+//------
+function presionaBoton() {
+   alert('presionaste boton!');
+}
+
+function hazAlgo() {
+   return presionaBoton;
+}
+
+document.onclick = hazAlgo();
+
+
+//------ anonima
+
+ document.onmousedown = function() { alert("Presionaste el boton"); 
+ }
+ 
+
+//------ autoinvocacion
+var x = (function () {return(5+6)})();
+document.writeln(typeof(x)+'<BR>');
+document.writeln(x);
+document.writeln(x);
+
+
+//-----
+function alerta(msg) {
+   alert(msg);
+}
+
+alerta( (function(animal1,animal2) { return animal1 + ' ama ' + animal2; } ) ('gato', 'perro') );
+
+//---------
+
+function mostrar(msg) {
+   document.writeln(msg+'<br>');
+}
+
+function crearCadena(num1, num2) {
+   return num1 + ' + ' + num2 + ' = ' + (num1+num2);
+}
+
+for (i=0; i<10; i++) {
+  mostrar( crearCadena(i, i+5) );
+}
+
+//------ apuntador
+var original = function () {
+   alert('Hola Mundo');
+}
+
+var copia = original;
+
+var original = function () {
+   alert('adios mundo');
+}
+
+copia();
+original();
+
+//---- visibilidad
+
+var global = function () {
+   alert('Hola Mundo');
+}
+var contenedora = function() {
+  var subFuncion = function() {
+    alert("Soy Local");
+    global();
+  }
+  global();
+  subFuncion();
+}
+contenedora();                 
+subFuncion();
+*/
+
+
+</script>
+
+</body>
+</html>

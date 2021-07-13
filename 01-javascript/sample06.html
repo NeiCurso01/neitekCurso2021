@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+    <script type="text/javascript">
+
+    /*propiedades de Arrays*/
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.writeln(fruits.length + "<br/>"); 
+
+    /*metodos de Arrays*/
+    document.writeln("toString " + fruits.toString() + "<br/>"); 
+
+    document.writeln("join(*) " + fruits.join(" * ") + "<br/>"); 
+
+    fruits.pop();
+    document.writeln("pop() " + fruits + "<br/>"); 
+
+    fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.push ("Kiwi");
+    document.writeln("push() " + fruits + "<br/>"); 
+
+    fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.shift ();
+    document.writeln("shift() " + fruits + "<br/>"); 
+
+    fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.unshift ("Lemon");
+    document.writeln("unshift() " + fruits + "<br/>"); 
+
+    fruits = ["Banana", "Orange", "Apple", "Mango"];
+    delete fruits[0];
+    document.writeln("delete  " + fruits + "<br/>"); 
+
+
+    fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.splice(2,0,"Lemon", "Kiwi")
+    document.writeln("splice  " + fruits + "<br/>"); 
+
+    </script>
+ </HEAD>
+ <BODY> 
+ </BODY>
+</HTML>

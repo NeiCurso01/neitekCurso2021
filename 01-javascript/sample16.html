@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Fechas</h2>
+
+<div id="relojDiv"> </div>
+<script>
+ var fecha = new Date();
+ alert (fecha);
+ fecha = new Date('May 8, 1984');
+
+ fecha = new Date('May 8, 1984 8:14:15 pm');
+
+ fecha = new Date('May 8, 1984 8:14:15 pm GMT');
+
+ fecha = new Date('May 8, 1984 8:14:15 pm GMT-7');
+
+ fecha = new Date('January 1, 1970'); // Parser
+
+ fecha = new Date(0); // Número Juliano
+ 
+ fecha = new Date(1970, 0, 1); // Argumentos
+
+//-------
+function reloj() {
+   var hoy = new Date();
+   var cadena = hoy.getHours()+':'+hoy.getMinutes()+':'+hoy.getSeconds();
+   document.getElementById('relojDiv').innerHTML=cadena;
+   setTimeout('reloj()',1000);
+}
+reloj();
+
+//---------
+Date.prototype.diasEnMes = function () {
+   return new Date(this.getFullYear(), 
+                   this.getMonth()+1,
+                   0)
+                   .getDate();
+}
+
+var d = new Date();
+document.writeln('Numeros de días en este mes: '+d.diasEnMes() + "<br/>");
+
+
+//------- x referencia
+var fechaOriginal = new Date('January 1, 1970');
+
+function cambiarYear(fecha) {
+  fecha.setFullYear(1980);
+}
+cambiarYear(fechaOriginal);
+document.writeln(fechaOriginal.getFullYear() + "<br/>"); //1980
+
+//------ x referencia
+var fechaOriginal1 = new Date('January 1, 1970');
+var nuevaFecha = fechaOriginal1;
+
+nuevaFecha.setFullYear(1980);
+
+document.writeln(fechaOriginal1.getFullYear()); //1980
+
+
+</script>
+
+
+</body>
+</html>
