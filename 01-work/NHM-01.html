@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<HEAD>
+    <script type="text/javascript">
+
+        let nombre = prompt("¿Cómo te llamas?");
+
+        let mayor;
+        
+        if (confirm("Eres mayor de edad?")) {
+            mayor = true;
+        } else {
+            mayor = false;
+        }
+       
+        let respuesta;
+        if (mayor) {
+            respuesta = prompt("Cual es tu pelicula favorita?");
+        } else {
+            respuesta = promt("Cual es tu caricatura favorita?");
+        }
+
+        alert("tus respuestas son:\nNombre: " + nombre + "\nmayor de edad: " + mayor + "\npelicula o caricatura favorita: " + respuesta);
+
+
+    </script>
+</HEAD>
+
+<BODY>
+</BODY>
+
+</HTML>
