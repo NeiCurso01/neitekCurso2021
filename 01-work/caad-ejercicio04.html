@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curso Neitek</title>
+</head>
+<body>
+	<h1>Ejemplos JavaScript</h1>
+	<h3>Carlos Arturo Aguilar D.</h3>
+	<script type="text/javascript">
+		texto  = prompt('Introduce una cadena: ');
+		cadena = texto.split(' ');
+		mensaje = '';
+		for (var i = 0; i < cadena.length; i++) {
+			mensaje += cadena[i].charAt(0).toUpperCase();
+			for (var j = 1; j < cadena[i].length; j++) {
+				mensaje += cadena[i].charAt(j);
+			}
+			mensaje += ' ';
+		}
+
+		alert('Resultado '+mensaje);	
+	</script>
+</body>
+</html>
