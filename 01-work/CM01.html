@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/* codigo por Carlos Alberto Moreno Rendón */
+		var resPrompt = prompt("como te llamas", "$$");
+		var resConfirm = window.confirm("eres mayor de edad?");
+		var resPromptA;
+
+		if(resConfirm == true)
+		{
+			resConfirm = "eres mayor de edad";
+			resPromptA = prompt("cual es tu pelicula favorita?", "$$");
+		}else{
+			resConfirm = "estas chiquito no eres mayor de edad";
+			resPromptA = prompt("cual es tu caricatura favorita?", "$$");
+		}
+
+
+
+		alert("tu nombre es: " + resPrompt +", "+ resConfirm + ", " + resPromptA );
+
+	</script>
+</body>
+</html>
