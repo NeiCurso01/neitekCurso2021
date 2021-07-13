@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+    <script type="text/javascript">
+	var res="";
+	var palabra = prompt ("Escriba una frase");
+	palabras=palabra.split(" ");
+	for(i=0; i<palabras.length; i++){
+	palabras[i]=palabras[i].charAt(0).toUpperCase()+palabras[i].slice(1);
+	}
+	alert(palabras);
+	var numero = prompt("Escriba una numero");
+	numero=numero.toString().split('').reverse().join('');
+	alert(numero);
+    </script>
+ </HEAD>
+ <BODY> 
+ </BODY>
+</HTML>

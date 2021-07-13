@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+    <script type="text/javascript">
+        var mensaje = prompt("Escribe algo");
+
+        var palabras = mensaje.split(" ");
+        var letra = [];
+        var mensaje1 = [];
+        var mensaje2="";
+
+
+        for (var i = 0; i < palabras.length; i++) {
+             letra[i] = palabras[i].charAt(0).toUpperCase();
+             mensaje1[i]= letra[i].concat(palabras[i].substring(1));
+        }
+
+        for (var i = 0; i < mensaje1.length; i++) {
+           mensaje2 = mensaje2.concat(mensaje1[i]+" ");
+        }
+
+        alert(mensaje2);
+    </script>
+ </HEAD>
+ <BODY> 
+ </BODY>
+</HTML>
