@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+    <script type="text/javascript">
+       texto  = prompt('Escribe un texto: ');
+		cadena = texto.split(' ');
+		mensaje = '';
+		for (var i = 0; i < cadena.length; i++) {
+			mensaje += cadena[i].charAt(0).toUpperCase();
+			for (var j = 1; j < cadena[i].length; j++) {
+				mensaje += cadena[i].charAt(j);
+			}
+			mensaje += ' ';
+		}
+
+		alert('El Resultado es '+mensaje);
+
+    </script>
+ </HEAD>
+ <BODY> 
+ </BODY>
+</HTML>
