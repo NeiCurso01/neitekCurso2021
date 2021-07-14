@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang ="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title>KCG</title>
+    </head>
+    <body>
+        <script src="./lodash.js">
+           
+            const array = [10,10,10,10,10];
+            const arrayClone = _.cloneDeep(array);
+
+            //reverse a los numeros del array original
+            alert(array.map((change)=>{
+              return change.toString().split("").reverse().join("");
+          }));
+
+          //clon del array original evitando la referencia por default con el metodo _.cloneDeep de la librería lodash
+           alert(arrayClone);
+        
+
+        </script>
+    </body>
+</html>
