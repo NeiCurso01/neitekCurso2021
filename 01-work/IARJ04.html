@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 04</title>
+</head>
+<body>
+     <script type="text/javascript">
+     	var cadena = prompt("Ingresa una cadena");
+     	var aux = cadena.split(" ");
+     	var nuevaCadena ="";
+
+     	for (var i = 0; i < aux.length; i++) { 
+             nuevaCadena += " " + aux[i].charAt(0).toUpperCase() + aux[i].substring(1);
+     	}
+
+     	alert(nuevaCadena);
+
+
+
+     	var numero = prompt("Ingresa un numero");
+        var numeroInvertido = "";
+     	for(var i = numero.length; i >= 0; i--){
+            numeroInvertido += numero.charAt(i);
+     	}
+
+     	alert("Numero invertido: " + numeroInvertido);
+
+     </script>
+</body>
+</html>
