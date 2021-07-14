@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curso Neitek</title>
+</head>
+<body>
+	<h1>Ejemplos JavaScript</h1>
+	<h3>Carlos Arturo Aguilar D.</h3>
+	<script type="text/javascript">
+
+		numeros  = [11,4,7,2,6,8,9,3];
+
+		alert('Del arreglo: '+mostrar(numeros)+'\nEl numero menor es '+elMenor(numeros));
+		alert(tabla());
+
+		function mostrar(arregloNum){
+			cadena='';
+			for (var i = 0; i < arregloNum.length; i++) {
+				cadena += arregloNum[i]+', ';
+			}
+			return cadena;
+		}
+
+		function elMenor(arregloNum){
+			menor=arregloNum[0];
+			for (var i = 1; i < arregloNum.length; i++) {
+				if (arregloNum[i]<menor)
+					menor = arregloNum[i];
+			}
+			return menor;
+		}
+		function tabla(){
+			var num1 = parseInt(prompt("Número de la tabla: "));
+			var num2 = parseInt(prompt("Hasta que número quieres la tabla: "));
+			tabla=[];
+			cadena='';
+			for (var i = 1; i <= num2; i++) {
+	            tabla[i] = num1*i;
+	            cadena += num1+' x '+ i +' = '+tabla[i]+'\n';
+	        }
+	        return cadena;
+	    }
+	</script>
+</body>
+</html>

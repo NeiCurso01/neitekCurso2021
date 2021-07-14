@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+    <script type="text/javascript">
+        //alert
+        var carac = "";
+        var num = "";
+        carac = prompt ("Hola!! Escribe una oracion", "??");
+        carac=carac.split(" ");
+        for(i=0; i<carac.length; i++){
+            carac[i]=carac[i].charAt(0).toUpperCase()+carac[i].slice(1);
+        }
+        alert("Tu Oracion es: " + carac);
+        
+
+        num = prompt ("Ingresa un numero mayor a dos digitos", "");
+
+        alert ("Tu numero " + num+ " invertido es " +num.split("").reverse().join(""));
+
+    </script>
+ </HEAD>
+ <BODY> 
+ </BODY>
+</HTML>
