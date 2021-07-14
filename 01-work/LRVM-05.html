@@ -2,15 +2,28 @@
 <HTML>
  <HEAD>
     <script type="text/javascript">
-	var numeros = [40, 100, 1, 5, 25, 10];
+	var numeros = [31,4,56,67,12,100];
 
     function minimo(arr) {
         return Math.min.apply(null, arr);
     } 
-
     var res = minimo(numeros);
-
     document.writeln("minimo: " + res + "<br/>"); 
+	
+	document.writeln("Tabla de multiplicar:"+ "<br/>");
+	var n = prompt("Valor maximo de la tabla");
+	var matrix = [];
+	for(var i=0; i<n; i++) {
+    	matrix[i] = [];
+    		for(var j=0; j<10; j++) {
+        	matrix[i][j] = (i+1)*(j+1);}
+	}
+	for(var i=0; i<n; i++) {
+    		for(var j=0; j<10; j++) {
+        	document.writeln(matrix[i][j]+" ");}
+		document.writeln("<br/>")
+	}
+	
     </script>
  </HEAD>
  <BODY> 
