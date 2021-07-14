@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<HEAD>
+    <script type="text/javascript">
+        //05_01
+        let numeros = [3, 23, 420, 530, 0, -2, 5, 3, 33];
+
+        function minimo(arreglo) {
+            return Math.min(...arreglo);
+        }
+
+        alert(`el numero menor de array es: ` + minimo(numeros));
+
+        //05_02
+        let num = prompt("¿Que tabla de multiplicar quieres?");
+        let n = prompt("¿valor maximo de tabla?");
+        let array = [];
+        for (let i = 1; i <= n; i++) {
+            array.push(i * num);
+            document.writeln(num + ` x ` + i + `=` + array[i - 1] + `<br>`);
+        }
+
+       //05_02
+
+        let arrayOriginal=[1,2,3,4];
+        // let arrayCopia=arrayOriginal;  
+        let arrayCopia=arrayOriginal.slice();
+
+        arrayOriginal[0]=322;
+    
+        alert(`Array 1: \n`+arrayOriginal);
+
+
+        alert(`Array 2:\n`+arrayCopia);
+
+
+    </script>
+</HEAD>
+
+<BODY>
+</BODY>
+
+</HTML>
