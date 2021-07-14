@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<HEAD>
+    <script type="text/javascript">
+
+
+        let palabras = prompt("Ingresa las palabras");
+
+        let arraypalabras = palabras.split(" ");
+
+
+        for (i = 0; i < arraypalabras.length; i++) {
+            arraypalabras[i] = arraypalabras[i].charAt(0).toUpperCase() + arraypalabras[i].slice(1);
+        }
+        alert("Tus palabras son: ");
+        for (i = 0; i < arraypalabras.length; i++) {
+            alert(arraypalabras[i])
+
+        }
+
+        let numero = prompt("ingresa el numero");
+        let alreves = "";
+        for (i = numero.length; i >= 0; i--) {
+            alreves += numero.charAt(i);
+        }
+        alert(alreves);
+
+    </script>
+</HEAD>
+
+<BODY>
+</BODY>
+
+</HTML>
