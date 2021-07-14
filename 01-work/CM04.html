@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ejercicio strings</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+
+		var palabra = prompt("introduce una frase", "");
+        var palabras = palabra.split(" ");
+        for(i=0; i<palabras.length; i++){
+            palabras[i]=palabras[i].charAt(0).toUpperCase()+palabras[i].slice(1);
+        }
+        alert("Tu Oracion es: " + palabras);
+        
+
+        numero = prompt ("ingresa un numero", "");
+
+        alert ("Tu numero " + numero+ " invertido es " +numero.split("").reverse().join(""));
+	</script>
+</body>
+</html>
