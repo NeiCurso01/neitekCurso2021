@@ -1,4 +1,4 @@
-+<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Curso Neitek</title>
@@ -9,11 +9,13 @@
 	<script type="text/javascript">
 		//alert(resultado);
 		//confirm("Estas seguro")
-		cadena  = 'Hola Mundo! \n';
-		cadena += 'incluyendo \'comillas simples\' y \"comillas dobles\"';
-		
-		alert(cadena)
-		
+		num  = parseInt(prompt('Introduce un numero entero'));
+		factorial = 1;
+		for (var i = 1; i <= num; i++) {
+			factorial *= i;
+		}
+
+		alert('El factorial de '+num+ ' es '+factorial);	
 	</script>
 </body>
 </html>
