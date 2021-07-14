@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+    <script type="text/javascript">
+
+
+    var points = [40, 100, 1, 5, 25, 10];
+
+    function myArrayMin(arr) {
+        return Math.min.apply(null, arr);
+    } 
+
+    var res = myArrayMin(points);
+
+    document.writeln("El numero minimo es: " + res + "<br/>"); 
+
+    function myArrayMin2(arr) {
+        var len = arr.length
+        var min = Infinity;
+        while (len--) {
+            if (arr[len] <=min) {
+                min = arr[len];
+            }
+        }
+        return min;
+    } 
+    var res = myArrayMin2(points);
+
+    document.writeln("El numero minimo es: " + res + "<br/>"); 
+
+    </script>
+ </HEAD>
+ <BODY> 
+ </BODY>
+</HTML>
