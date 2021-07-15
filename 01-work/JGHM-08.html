@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        const dia= prompt("Pon el dia ");
+        let mes= prompt('Pon el mes ');
+        mes-=1;
+        const año= prompt('Pon el año');
+        const myFecha = new Date(año,mes,dia);
+        let citas=[];
+
+        for (i=mes ; i <(mes+6); i++){
+            citas.push(new Date(año,mes,dia));
+        }
+
+        document.write(citas);
+
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
