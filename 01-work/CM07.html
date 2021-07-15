@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>tabla de 5 sin multiplicar</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var resultado = 0;
+		var num =5;
+
+		for (i =1; i <= 10; i++) 
+		{
+			resultado += num;
+			document.write(resultado + " ");
+		}
+		document.write("<br>")
+		
+		//conte0 de 10 a 1
+		var dec = 10;
+		while (dec>0)
+		{
+			document.writeln(dec + "<br>");
+			dec --;
+		}
+
+		//adivinar numero
+		var adiv = parseInt(prompt("ingresa un numero entre el 1 y el 10, intentare adivinarlo", ""));
+
+		var pista = window.confirm("es 5 ?");
+
+		if (pista == true) {
+			alert("soy buenisimo adivine :)");
+		}else {
+			pista = window.confirm("es mayor de 5 ?");
+			if (pista== true) {
+				pista = window.confirm("es 8?");
+				if (pista ==true) {
+					alert("adivine, genial :)");
+				}else{
+					pista = window.confirm("es menor de 10 ?");
+					if (pista==false) {
+						alert("ahora si lo adivine es 10");
+					}else{
+						alert("no pude adivinarlo");
+					}
+				}
+
+			}else{
+				pista = window.confirm("es 3?");
+				if (pista ==true) {
+					alert("adivine, genial :)");
+				}else{
+					pista = window.confirm("es menor que 3?")
+					if (pista==true) {
+						pista = window.confirm("es 2?")
+						if (pista==true) {
+							alert("sabia que era ese")
+						}else{
+							alert("me doy por vencido");
+						}
+					}else{
+						alert("me doy :(");
+					}
+				}
+			}
+		}
+
+		
+	</script>
+</body>
+</html>
