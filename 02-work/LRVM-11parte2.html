@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejercicio 2 - DOM </title>
+
+<script type="text/javascript">
+function agregar() {
+    // Crear nodo de tipo Element
+    var lista=document.getElementById("lista");
+    var nuevoCol=document.getElementById("colorNuevo").value;
+    var vineta = document.createElement("li");
+    var color = document.createTextNode(nuevoCol.toString());
+    colores=lista.getElementsByTagName("li");
+    var bandera=1;
+    for(i=0;i<colores.length;i++){
+        if(colores[i].innerText==nuevoCol){
+            bandera=0;
+        }
+    }
+    if(bandera==1){
+        vineta.appendChild(color);
+        lista.appendChild(vineta);
+    }
+}
+</script>
+</head>
+
+<body>
+<h1>Colores</h1>
+<ul id="lista">
+	<li>Amarillo</li>
+	<li>Azul</li>
+	<li>Rojo</li>
+	<li>Verde</li>
+	<li>Naranja</li>
+</ul>
+
+<input type="button" value="Agregar color" onclick="agregar();">
+<input type="text" id="colorNuevo">
+
+</body>
+</html>
