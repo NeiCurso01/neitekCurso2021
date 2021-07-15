@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<HEAD>
+    <script type="text/javascript">
+        ///
+        document.writeln(`<h1>Tabla del cinco </h1>`);
+        let contador = 1;
+        for (let i = 5; i <= 50; i += 5) {
+
+            document.writeln(`5 x ` + contador + `= ${i} <br>`);
+            contador++;
+        }
+        ///
+        document.writeln(`<h2>Contar del 10 al 1</h2>`);
+        let cont = 10;
+        while (cont >= 1) {
+            document.write(cont + `<br>`);
+            cont--;
+        }
+
+
+        ///
+        let aleatorio = Math.floor(Math.random() * (10 - 1)) + 1;
+        alert(aleatorio);
+
+        let respuesta;
+        alert("Este es el juego de adivinar el numero");
+        do {
+
+            respuesta = prompt("Que numero estoy pensando?");
+            if (respuesta == aleatorio) {
+                alert("Correcto!");
+                break;
+            }
+
+            alert(respuesta < aleatorio ? "Es un numero más grande, intenta de nuevo" : "Es un numero más pequeño, intenta de nuevo");
+
+        } while (respuesta != aleatorio)
+
+
+
+
+    </script>
+</HEAD>
+
+<BODY>
+</BODY>
+
+</HTML>
