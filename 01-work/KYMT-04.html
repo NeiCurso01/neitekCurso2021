@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+    <SCRIPT LANGUAGE="JavaScript">
+
+        var cadena;
+        var res = "";
+        var rest = "";
+        var nc = "";
+        var i;
+        var numeros;
+        cadena = prompt("Digite una cadena", "??");
+        nc = cadena.split(' ');
+
+        for(i = 0; i<nc.length; i++){
+            res += " " + nc[i].charAt(0).toUpperCase() + nc[i].substring(1);   
+        }
+
+        alert(res);
+
+
+        numeros = prompt("Digite una cadena de numeros", "??");
+
+        for(i = numeros.length-1; i>=0; i--){
+            rest += numeros[i];
+        }
+
+        alert(rest);
+
+
+    </SCRIPT>
+ </HEAD>
+ <BODY> 
+ </BODY>
+</HTML>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+
+<h2>Citas por 6 meses</h2>
+<script>
+const d= prompt ("Dia");
+let m= prompt("Mes");
+m=m-1;
+const y =prompt("Year");
+const myDate = new Date(y,m,d);
+let misCitas=[];
+for(let i=m; i<= (m+6); i++)
+{ misCitas.push(new Date(y,i,d));
+}
+document.writeln(misCitas);
+
+</script>
+</head>
+</body>
+</html>

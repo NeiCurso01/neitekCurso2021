@@ -1,14 +1,20 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
- <HEAD>
-    <script type="text/javascript">
-	var numeros = [31,4,56,67,12,100];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Arrays</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+	var arreglo = [100, 20, 12, 8, 99, 70];
 
     function minimo(arr) {
         return Math.min.apply(null, arr);
     } 
-    var res = minimo(numeros);
-    document.writeln("minimo: " + res + "<br/>"); 
+    var resultado = minimo(arreglo);
+    document.writeln("minimo: " + resultado + "<br/>"); 
 	
 	document.writeln("Tabla de multiplicar:"+ "<br/>");
 	var n = prompt("Valor maximo de la tabla");
@@ -23,9 +29,6 @@
         	document.writeln(matrix[i][j]+" ");}
 		document.writeln("<br/>")
 	}
-	
-    </script>
- </HEAD>
- <BODY> 
- </BODY>
-</HTML>
+	</script>
+</body>
+</html>
