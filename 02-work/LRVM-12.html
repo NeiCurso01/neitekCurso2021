@@ -1,0 +1,22 @@
+<html>
+<body>
+<script>
+    const nombre="Luis Ricardo Valencia Martinez";
+    var aNac=1998;
+
+function despliega() {
+    let n=nombre;
+    let y=aNac;
+    document.write(n+"\n"+y);
+}
+function calcula(){
+    let fechaActual = new Date()
+    let añoActual=fechaActual.getFullYear()
+    let edad=añoActual-aNac;
+    document.write("Edad: "+edad+" años.");
+}
+</script>
+<input type="button" value="Mostrar nombre y fecha:" onclick="despliega();">
+<input type="button" value="Obtener edad:" onclick="calcula();">
+</body>
+</html>
