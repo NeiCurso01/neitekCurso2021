@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+ <p id="fijo">Este parrafo NO se va a borrar...</p>
+ <p id="provisional">Este parrafo se va a borrar...</p>
+ 
+
+<script>
+ 
+
+function borraParrafo()
+{
+    var parrafo = document.getElementById("provisional");
+    parrafo.parentNode.removeChild(parrafo);
+}
+
+
+document.onclick = borraParrafo;
+
+
+</script>
+
+</body>
+</html>
