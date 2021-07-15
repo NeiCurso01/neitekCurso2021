@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejercicio 2 - DOM </title>
+
+<script type="text/javascript">
+function agregar() {
+	var elementoLi = document.getElementsByTagName("li");
+	var ul = document.getElementById("lista");
+	var nuevoColor = document.getElementById("colorNuevo").value;
+
+    var flag;
+
+	for (var i = 0; i < elementoLi.length; i++) {
+	     if(elementoLi[i].innerText.toLowerCase() == nuevoColor.toLowerCase()){
+	     	alert("El color ya esta en la lista!");
+	     	flag = true;
+	     }
+	}
+
+	if(!flag){
+		var nuevoLi = document.createElement("li");
+        var contenido = document.createTextNode(nuevoColor);
+
+        nuevoLi.appendChild(contenido);
+        ul.appendChild(nuevoLi);
+	}  
+}
+</script>
+</head>
+
+<body>
+<h1>Colores</h1>
+<ul id="lista">
+	<li>Amarillo</li>
+	<li>Azul</li>
+	<li>Rojo</li>
+	<li>Verde</li>
+	<li>Naranja</li>
+</ul>
+
+<p>Elige el color a agregar </p>
+<input type="text" id="colorNuevo">
+<input type="button" value="Agregar color" onclick="agregar();">
+
+
+</body>
+</html>
