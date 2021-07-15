@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Eventos</h2>
+<div id="relojDiv"> </div>
+
+
+<script>
+// Funci�n externa
+
+function mensaje() 
+{
+    function reloj() {
+    var hoy = new Date();
+    var cadena = hoy.getHours()+':'+hoy.getMinutes()+':'+hoy.getSeconds();
+    document.getElementById('relojDiv').innerHTML=cadena;
+    setTimeout('reloj()',1000);
+    alert(hoy);
+    }
+    reloj();
+
+//var d = new Date();
+  alert('Gracias por la fecha');
+}
+ function agrandar()
+ { var myWindow = window.open("https://www.google.com","_blank","width=400,height=500");
+ }
+
+// Asignar la funci�n externa al elemento
+    window.onload = function() {
+     document.getElementById("btn1").onclick = mensaje;
+    document.getElementById("btn2").ondblclick=agrandar;}
+    
+   
+
+</script>
+ 
+<input id="btn1" type="button" value="Fecha y Hora" />
+<input id="btn2" type="button" value="pagina2" />
+
+</body>
+</html>

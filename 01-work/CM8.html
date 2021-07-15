@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>citas para 6 meses</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var dia = prompt("ingresa el dia", " ");
+		var mes = prompt("ingresa el mes", " ");
+		var anio = prompt("ingresa el año", " ");
+
+		var fecha = new Date(dia, mes, anio);
+		var citas = [];
+
+		for (i=mes ; i < (mes+6); i++)
+		{
+			citas.push(new Date(anio, mes, dia));
+		}
+		
+	</script>
+</body>
+</html>

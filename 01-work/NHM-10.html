@@ -1,0 +1,51 @@
+<HTML>
+
+<HEAD>
+    <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+
+    <title>Pagina</title>
+
+    <script>
+        let botonname=`URL`;
+        let boton = `<button onclick="
+        let inputURL = document.getElementById(\`URL\`);
+        let ventana = window.open(inputURL.value, \`titulo\`, \`width=800,height=640,scrollbars=NO\`);
+        inputFecha.value ;
+        ">Oprimir para url :D</button><br>`;
+    
+        function alCargar() {
+            let titulo = document.title;
+            let ventana = window.open("", "Titulo", "width=800,height=640,scrollbars=NO");
+            ventana.document.title = "Titulo1";
+
+            ventana.document.writeln(`${ventana.document.title} 
+            <br>Java: ${navigator.javaEnabled()}<br>
+             ${navigator.userAgent}<br>
+             Cookies: ${navigator.cookieEnabled}<br>
+             Ancho:${ventana.screen.width}<br>
+             Alto:${ventana.screen.height}<br>
+             URL:${ventana.location.href}<br>
+             <button onclick="window.moveTo(300, 200);">Oprimir para cambiar posicion :D</button><br>
+             <button onclick="window.history.back();">Oprimir anterior</button><br>
+             
+             <label for="URL">URL:</label><br>
+             <input type="text" id="URL" name="URL" value=""><br>
+
+             ${boton}
+
+            `);
+        }
+
+
+
+
+    </script>
+</HEAD>
+
+<BODY onload="alCargar()">
+
+
+
+</BODY>
+
+</HTML>
