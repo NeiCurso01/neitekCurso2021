@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+
+    function myFunction() {
+        var myWindow = window.name = 'Mi ventana';
+        var nameNavegador = window.navigator.appName;
+        var habCoockies = window.navigator.cookieEnabled;
+        var wid = window.screen.width;
+        var hei = window.screen.height;
+        var nomUrl = window.location.href;
+
+
+
+        document.writeln(myWindow + "</br>");
+        document.writeln(nameNavegador + "</br>");
+        document.writeln(habCoockies + "</br>");
+        document.writeln(wid + "</br>");
+        document.writeln(hei + "</br>");
+        document.writeln(nomUrl + "</br>");
+}
+    </script>
+</head>
+<body>
+    <h1>Datos de la pagina web</h1>
+    <button onclick="myFunction()">Clic aqui</button>
+</body>
+</html>
