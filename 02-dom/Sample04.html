@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<center>
+<a id="myAnchor" href="http://www.neitek.com">Neitek</a>
+<br>
+<button onclick="myFunction()">Change link</button>
+<br><br><br>
+<button onclick="myFunction2()">Now you see...</button>
+</center>
+ 
+<script>
+function myFunction() {
+    document.getElementById("myAnchor").innerHTML = "Google";
+    document.getElementById("myAnchor").href = "https://www.google.com";
+    document.getElementById("myAnchor").target = "_blank";
+}
+
+function myFunction2() {
+   var htmlCode = "<center><h1>Now you can't!!</h1></center>";
+
+    document.body.innerHTML = htmlCode;
+}
+
+
+</script>
+
+</body>
+</html> 

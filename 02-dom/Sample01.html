@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p name="especial" id="demo1">hola</p>
+<p id="demo2">adios</p>
+<a href="http://www.google.com">Google!</a> <br/>
+<a href="http://www.gmail.com">Gmail</a>
+
+<div id="cabecera">
+  <a href="/" id="logo">...</a>
+</div>
+
+<script>
+
+//-------- getElementByTagName
+var parrafos = document.getElementsByTagName("p");
+
+for(var i=0; i<parrafos.length; i++) {
+  var parrafo = parrafos[i];
+  console.log (parrafo);
+}
+
+//------ getElementByName
+var parrafoEspecial = document.getElementsByName("especial");
+ 
+console.log (parrafoEspecial[0]);
+
+//------ getElementById
+var cabecera = document.getElementById("cabecera");
+console.log (cabecera);
+
+</script>
+
+</body>
+</html>

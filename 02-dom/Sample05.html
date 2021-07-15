@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<a id="enlace" href="http://www.google.com">Enlace</a>
+ 
+<p id="parrafo" style="font-weight: bold;">Bold font!</p>
+
+<img id="imagen" style="margin:100px; border:0;" src="neitek.png" />
+
+<p id="parrafoClass" class="normal">Class Normal</p>
+
+<script>
+/*
+  var enlace = document.getElementById("enlace");
+  alert(enlace.href); // muestra http://www...com
+
+  console.dir (enlace);
+
+
+  //---
+  var parrafo = document.getElementById("parrafo");
+  alert(parrafo.style.fontWeight);  // muestra "bold"
+ 
+  console.dir (parrafo);
+
+
+  //--
+  var imagen = document.getElementById("imagen");
+  alert(imagen.style.margin);
+
+  console.dir (imagen);
+*/
+
+var parrafoC = document.getElementById("parrafoClass");
+alert(parrafoC.class); // muestra "undefined"
+alert(parrafoC.className); // muestra "normal"
+ 
+
+</script>
+
+</body>
+</html>
