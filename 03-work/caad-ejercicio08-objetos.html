@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curso Neitek</title>
+</head>
+<body>
+	<h1>Ejemplos JavaScript</h1>
+	<h3>Carlos Arturo Aguilar D.</h3>
+	<div id="empresa"></div>
+	<div id="escuela"></div>
+	<script type="text/javascript">
+		function Company (nombre, dir, ciudad, tel, tipo) { // prototype
+			this.name = nombre;
+			this.address = dir;
+			this.city = ciudad;
+			this.telephone= tel;
+			this.businnesType= tipo;
+		}
+		function School (nombre, carreras) { // prototype
+			this.name = nombre;
+			this.carreers = carreras;
+		}
+		neitek = new Company('Neitek', 'Torre Diamante 1007','Monterrey','8181-1234', 'Computer System');
+		softek = new Company('Softek', 'Torre Diamante 1008','San Nicolás','8181-4321', 'Software');
+
+		tecMad = new School('IT cd Madero',['ISC','IE','IQ','II','IM']);
+		tecAlt = new School('IT Altamira',['IGE','IA','ISC']);
+
+		cadena1 = '<p><b>'+neitek.name+'</b> está ubicada en '+neitek.city+'<p>';
+		cadena1+= '<p><b>'+softek.name+'</b> está ubicada en '+softek.city+'<p>';
+
+		cadena2 = '<p>El <b>'+tecMad.name+'</b> carreras: '+tecMad.carreers[0]+', ';
+		cadena2+= tecMad.carreers[1]+', '+tecMad.carreers[2]+'<p>'; //etc..
+		cadena2+= '<p>El <b>'+tecAlt.name+'</b> carreras: '+tecAlt.carreers[0]+', ';
+		cadena2+= tecAlt.carreers[1]+', '+tecAlt.carreers[2]+'<p>';
+
+		document.getElementById('empresa').innerHTML=cadena1;
+		document.getElementById('escuela').innerHTML=cadena2;
+		
+	</script>
+</body>
+</html>
