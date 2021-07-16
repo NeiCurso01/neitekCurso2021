@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 4</title>
+</head>
+<body>
+     <script type="text/javascript">
+     	function Person(name, lastName, age){
+           this.name = name;
+           this.lastName = lastName;
+           this.age = age;
+
+           //get&set con metodos
+           get getPersonData(){
+           	 return this.name + ", " + this.lastName + ", " + this.age;
+           },
+
+           set setPersonData(newData){
+              var parts = newData.toString().split(", ");
+              this.name = parts[0] || "";
+              this.lastName = parts[1] || "";
+              this.age = parts[2] || "";
+           }
+
+           //get&set con defineproperty
+           Object.defineproperty (Person.prototype, "PersonData", {
+           	 get: function(){
+           	 	return "name: " + this.name + " lastName: " + this.lastName + " age: " + this.age;
+           	 },
+           	 set: function(newData){
+           	 	var parts = newData.toString().split(", ");
+                this.name = parts[0] || "";
+                this.lastName = parts[1] || "";
+                this.age = parts[2] || "";
+           	 }
+           });
+     	}
+
+     	//get&set con ECMAScript 5
+        var Person2 = function (name, lastName, age){
+           this._name = name;
+           this._lastName = lastName;
+           this._age = age;
+       }
+        Person.prototype = {
+           	 set name(name){this._name = name;}
+           	 set lastName(lastName){this._lastName = lastName;}
+           	 set age(age){this._age = age;}
+           	 get name(){return this._name;},
+           	 get lastName(){return this._lastName;},
+           	 get age(){return this._age;},
+        }
+     </script>
+</body>
+</html>

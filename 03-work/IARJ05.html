@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 5</title>
+</head>
+<body>
+     <script type="text/javascript">
+     	 function Person(name, canTalk){
+            this.name = name;
+            this.canTalk = canTalk;
+
+            this.greet = function(){
+            	if(this.canTalk){
+            		return "Hi, i can talk!";
+            	}else{
+            		return "...";
+            	}
+            }
+     	 }
+
+     	 function Customer(){
+            
+     	 }
+
+     	 function Employee(title){
+            this.title = title;
+
+            this.greet = function(){
+            	return "Hi, im an " + this.title + "!";
+            }
+     	 }
+
+     	 function Mime(){
+             this.canTalk = false;
+     	 }
+          
+         
+         Customer.prototype = new Person("Persona", true);
+         Customer.prototype.constructor = Customer;
+     	 Employee.prototype = new Person("Empleado", true);
+     	 Employee.prototype.constructor = Employee;
+     	 Mime.prototype = new Person("Mime", false);
+     	 Mime.prototype.constructor = Mime;
+
+     	
+         var c1 = new Customer();
+     	 var e1 = new Employee("empleado");
+     	 var m1 = new Mime();
+
+         document.writeln(c1.greet() + "<br/>");
+     	 document.writeln(e1.greet() + "<br/>");
+     	 document.writeln(m1.greet() + "<br/>");
+
+     </script>
+</body>
+</html>

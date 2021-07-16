@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 6</title>
+</head>
+<body>
+     <script type="text/javascript">
+     	 class Animal {
+     	 	constructor(name){
+                this.name = name;
+     	 	}
+
+     	 	toString(){
+     	 		return "The animal name is: " + this.name;
+     	 	}
+     	 }
+
+     	 class Canine extends Animal {
+     	 	constructor(name, domestic){
+     	 		super(name);
+     	 		this.domestic = domestic;
+     	 	}
+
+     	 	toString(){
+     	 		return super.toString() + ", the canine is " + ((this.domestic) ? "domestic." : "not domestic.");  
+     	 	}
+     	 }
+
+     	 class Dog extends Canine {
+     	 	constructor(name, domestic, owner){
+     	 		super(name, domestic);
+     	 		this.owner = owner;
+     	 	}
+
+     	 	toString(){
+     	 		return super.toString() + ", owner name: " + this.owner;
+     	 	}
+     	 }
+
+     	 class Fox extends Canine {
+     	 	constructor(name, domestic, color) {
+     	 		super(name, domestic);
+     	 		this.color = color;
+     	 	}
+
+     	 	toString(){
+     	 		return super.toString() + ", color: " + this.color;
+     	 	}
+     	 }
+
+     	 var perro = new Dog("Shepard", true, "Ivan");
+     	 var zorro = new Fox("Foxy", false, "Red")
+     	 document.writeln(perro.toString() + "<br/>");
+     	 document.writeln(zorro.toString() + "<br/>");
+     </script>
+</body>
+</html>

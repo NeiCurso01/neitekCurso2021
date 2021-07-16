@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 3</title>
+</head>
+<body>
+     <script type="text/javascript">
+         function Student(name, lastName, grade){
+         	this.name = name;
+         	this.lastName = lastName;
+         	this.grade = grade;
+
+         	this.getName = function(){
+               return this.name + " " + this.lastName;
+         	}
+
+         	this.printGrade = function(){
+         		return "La calificación es: " + this.grade;
+         	}
+         }
+
+         var estudiante1 = new Student("Ivan", "Ramirez", 10);
+         var estudiante2 = new Student("Alejandro", "Juarez", 8);
+
+         document.writeln("Estudiante : " + estudiante1.getName() + "<br/>" + estudiante1.printGrade());
+         document.writeln("<br/>Estudiante : " + estudiante2.getName() + "<br/>" + estudiante2.printGrade());
+     </script>
+</body>
+</html>
