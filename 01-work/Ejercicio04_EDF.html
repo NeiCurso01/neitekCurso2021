@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 02_ EDF</title>
+	<script type="text/javascript">
+		var mensaje;
+		var palabras;
+		var nuevoMensaje="";
+		mensaje = prompt("ingrese una frese o mensaje");
+		palabras = mensaje.split(" ");
+		//alert (palabras);
+
+		for (var i = 0; i < palabras.length; i++) {
+			nuevoMensaje += palabras[i].charAt(0).toUpperCase() + palabras[i].slice(1)+" ";
+		}
+		alert(nuevoMensaje);
+	
+	</script>
+</head>
+<body>
+
+</body>
+</html>
