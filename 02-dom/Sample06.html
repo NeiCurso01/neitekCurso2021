@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+ 
+
+<script>
+ 
+//---------CONST
+//---------
+//code will throw an error
+/*
+const pi=3.14
+console.log(pi)
+pi=3;
+ 
+//---------
+//code will throw an error
+const num=5;
+const num=6;
+
+//---------
+//code will throw an error
+const num;
+num=6;
+ 
+
+//---------
+//code OK
+const greeting = {
+	message: "say Hi",
+	times: 4
+};
+*/
+ 
+ 
+//---------VAR
+//--------- 
+/*
+function foo(){
+   var n=6;
+   console.log(n);
+}
+
+var n=5;
+console.log(n);
+foo();
+console.log(n);
+
+//---------
+
+var tester = "hey hi";
+    
+function newFunction() {
+	var hello = "hello";
+}
+console.log(hello); // error: hello is not defined
+
+
+//---------
+var greeter = "hey hi";
+var greeter = "say Hello instead";
+
+//---------
+var greeter = "hey hi";
+greeter = "say Hello instead";
+*/
+
+
+//---------LET
+//---------
+//code will throw an error
+/*
+function foo(n) {
+    if (n == 6) {
+        let num = 2;
+    }
+    console.log(num);
+}
+
+var n = 6;
+console.log(n);
+foo(6);
+
+//---------
+function foo(n) {
+    if (n === 6) {
+        var num = 2;
+    }
+      console.log(num);
+    
+}
+
+var n = 6;
+console.log(n);
+foo(n);
+*/
+//---------
+
+//code will throw an error
+/*
+for(var i=0;i<3;i++){
+  console.log(i)
+}
+console.log("i outside the loop: ", i);
+
+for(let j=0;j<3;j++){
+  console.log(j);
+}
+
+console.log("j oustide the loop :", j);
+*/
+//---------
+
+   let greeting = "say Hi";
+   let times = 4;
+   let hello ="";
+   if (times > 3) {
+        hello = "say Hello instead";
+        console.log(hello);// "say Hello instead"
+    }
+   console.log(hello) // hello is not defined
+/*
+//---------
+
+let greeting = "say Hi";
+greeting = "say Hello instead";
+
+
+//---------
+
+let greeting = "say Hi";
+let greeting = "say Hello instead"; // error: Identifier 'greeting' has already been declared
+
+
+*/
+</script>
+
+</body>
+</html>
