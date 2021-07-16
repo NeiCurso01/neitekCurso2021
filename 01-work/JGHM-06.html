@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      //Loop para sacar la tabla del 5
+      document.write(
+        "Tabla del cinco sin utilizar el operador de multiplicacio" + "<br/>"
+      );
+
+      var suma = 0;
+      for (i = 0; i < 10; i++) {
+        suma += 5;
+        document.write(suma + "-");
+        document.write("\n");
+      }
+
+      //Conteo del 10 al 1
+      document.write("<br/>" + "Conteo del 10 al 1" + "<br/>");
+      var conta = 10;
+
+      while (conta > 0) {
+        document.write(conta + "<br/>");
+        conta--;
+      }
+
+      //El juego de adivinar
+      document.write("<br/>" + "El juego de adivinar" + "<br/>");
+      var num = Math.floor(Math.random() * 10);
+      do {
+        var seleccion = prompt("Adivina un numero del 1 al 10");
+        var correcto = false;
+        if (seleccion == num) {
+          document.write("Felicidades, ganaste!!  el numero era " + num);
+          correcto = true;
+        } else if (seleccion < num) {
+          alert("Es mayor el valor, vuelve a intentarlo");
+        } else {
+          alert("Es menor el valor, vuelve a intentarlo");
+        }
+      } while (!correcto);
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <HEAD>
+        <script type="text/javascript">
+
+      
+        function Ponerfecha() {
+            fecha = Date();
+            document.getElementById('fecha').innerHTML = fecha;    
+        }
+
+        function nombre() {
+            var nom = prompt("Pon tu nombre");
+            document.getElementById('name').innerHTML = nom;
+        }
+
+        function green() {
+            document.getElementById('boton').style.color='green';
+        }
+
+        function morado() {
+            document.getElementById('boton').style.color='purple';
+        }
+
+        window.onload = function () {
+            nombre();
+            document.getElementById('boton').onclick = green;
+            document.getElementById('boton').onmouseover = morado;
+           
+        }
+     
+            
+
+    </script>
+</HEAD>
+<BODY>
+    <h1 id="name"></h1>
+    <button onclick="Ponerfecha()"> Haz Clic para la fecha </button>
+    <br />
+    <div id="fecha"> </div> 
+    <button id="boton" > Cambiar color </button>
+</BODY>
+    
+</body>
+</html>

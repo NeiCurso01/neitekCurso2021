@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <script type="text/javascript">
-        var numero = prompt ("Dame el numero por favor");
-        n=numero
-        res=numero
-        if(numero==1 || numero==0){
-            alert("Un numero mayor a 1 por favor");
+      var numero = prompt("Dame el numero por favor");
+      n = numero;
+      res = numero;
+      if (numero == 1 || numero == 0) {
+        alert("Un numero mayor a 1 por favor");
+      } else {
+        for (i = 1; i < n; i++) {
+          res = res * (n - i);
         }
-            else{
-            for (i=1; i<n; i++) {
-            res=res*(n-i)
-            }
-            alert("El factorial es = " +res)
-            }
-    
-        </script>
+        alert("El factorial es = " + res);
+      }
+    </script>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body></body>
 </html>

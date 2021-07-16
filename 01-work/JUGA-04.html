@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<HEAD>
+    <script type="text/javascript">
+
+        var datos = prompt('Ingresa una oración');
+        var vector1 = datos.split(" ");
+        alert("Datos ingresados: " + vector1);
+
+        for (let i = 0; i < vector1.length; i++) {
+            vector1[i] = vector1[i].charAt(0).toUpperCase().concat(vector1[i].substring(1, vector1[i].length));
+        }
+
+        alert("Datos de salida: " + vector1);
+
+    </script>
+</HEAD>
+
+<BODY>
+</BODY>
+
+</HTML>

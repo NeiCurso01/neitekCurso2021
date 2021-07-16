@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <script>
-        var numeros = [1,2,3,4,5,6,7];
-        var menor;
-        function menorDeUnArreglo(arreglo) {
-        return Math.min.apply(null,arreglo);
-        } 
+      var numeros = [1, 2, 3, 4, 5, 6, 7];
+      var menor;
+      function menorDeUnArreglo(arreglo) {
+        return Math.min.apply(null, arreglo);
+      }
 
-    var menor = menorDeUnArreglo(numeros);
-    document.write("Vector =" + numeros);
-    document.writeln("\n minimo: " + menor + "<br/>"); 
+      var menor = menorDeUnArreglo(numeros);
+      document.write("Vector =" + numeros);
+      document.writeln("\n minimo: " + menor + "<br/>");
 
-    document.writeln("-------------------------------------------"+ "<br/>");
-	var n = prompt("Hasta qeu tabla quieres ver");
-	var matriz = [];
-	for(var i=0; i<n; i++) {
-    	matriz[i] = [];
-    		for(var j=0; j<10; j++) {
-        	matriz[i][j] = (i+1)*(j+1);}
-	}
-	for(var i=0; i<n; i++) {
-    		for(var j=0; j<10; j++) {
-        	document.writeln(matriz[i][j]+" ");}
-		document.writeln("<br/>")
-	}
+      document.writeln("-------------------------------------------" + "<br/>");
+      var n = prompt("Hasta qeu tabla quieres ver");
+      var matriz = [];
+      for (var i = 0; i < n; i++) {
+        matriz[i] = [];
+        for (var j = 0; j < 10; j++) {
+          matriz[i][j] = (i + 1) * (j + 1);
+        }
+      }
+      for (var i = 0; i < n; i++) {
+        for (var j = 0; j < 10; j++) {
+          document.writeln(matriz[i][j] + " ");
+        }
+        document.writeln("<br/>");
+      }
 
-
-    //Parte 3, no se si esta bien, no entendi muy bien la instruccion 
-    var array=array.arreglo;
+      //Parte 3, no se si esta bien, no entendi muy bien la instruccion
+      var array = array.arreglo;
     </script>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body></body>
 </html>

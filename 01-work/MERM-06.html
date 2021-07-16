@@ -1,0 +1,81 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+    <script type="text/javascript">
+
+        //NUMERO MENOR
+        var mensaje = prompt("Escribe numeros separados por coma: ");
+        var points = mensaje.split(",");
+
+        var res = valorMenor(points);       
+        document.writeln("Minimo: " + res + "<br/>"); 
+        
+        function valorMenor(arr) {
+            var min;
+            for (var i = 0; i < arr.length; i++) {
+                if (i == 0) {
+                    min = arr[i];
+                } else if (arr[i] < min) {
+                    min = arr[i];
+                }
+            }       
+             return min;
+        }   
+
+         var res1 = myArrayMin(points);       
+        document.writeln("Minimo: " + res1 + "<br/>"); 
+
+        function myArrayMin(arr) {
+        return Math.min.apply(null, arr);
+    } 
+
+        //TABLAS DE MULTIPLICAR
+        var numero = prompt("Escribe el numero maximo de la tabla: ");
+        var numero1 = [];
+        var numero2 = [];
+        var resultado = [];
+        var res;
+
+        document.writeln("TABLAS DE MULTIPLICAR <br/> <br/>");
+        res = tabla(numero);
+
+        function tabla(numero) {
+            for (var i = 0; i <= numero; i++){
+             numero1[i] = i; 
+               for (var j = 0; j <= 10; j++) {
+                   numero2[j] = j;
+                   resultado[j] = numero1[i] * numero2[j];
+                   document.writeln(numero1[i] + " x " + numero2[j] + " = " + resultado[j] + "<br/>");
+       
+                }   
+                 document.writeln("<br/>");
+            }
+        }
+
+        
+      //  Tabla de multiplicar del numero 5
+        var res = [];
+        var res1 = [];
+
+        for (var i = 1; i <= 10; i++) { 
+            res[i] = 5;
+            for (var j = 1; j < i; j++) {
+                res[i] = res[i] + 5;                
+            }
+            res1[i] = res[i];
+            document.writeln(i + " x " + " 5 " + " = " + res1[i] + "</br>");
+        }
+       
+        // Contar de 10 aL 1
+        var numero = 10;
+
+        while (numero >= 1) {
+            document.writeln(numero + "</br>");
+            numero--;
+        }
+
+    </script>
+</HEAD>
+<BODY>
+</BODY>
+</HTML>

@@ -1,0 +1,81 @@
+<HTML>
+
+<HEAD>
+    <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+        
+    <label>Tu Nombre:</label><br>
+    <label id="nombre" name="nombre" value=""><br>
+
+
+    <button onclick="fecha()">Oprimir para saber la fecha :D</button><br>
+    <label for="fecha">Fecha:</label><br>
+    <input type="text" id="fecha" name="fecha" value=""><br>
+
+
+    <style>
+        .square {
+            height: 50px;
+            width: 50px;
+            background-color: #555;
+        }
+    </style>
+
+    <br>
+    <div  ondblclick="cuadrado()" id= "Cuadrado" class="square"></div>
+
+
+    <button id="botonColor" onclick="color()"  onmouseover="colorFondo()" >Cambio de color</button><br>
+
+    <script type="text/javascript">
+        
+        function alcargar(){
+            let nombre=prompt("cual es tu nombre?");
+            
+            let labelNombre = document.getElementById("nombre");
+            labelNombre.innerHTML="<h1>"+nombre+"</h1>"+labelNombre.innerHTML;
+        }
+
+        function fecha() {
+            let date = new Date();
+            let fecha = date.getDate() + `/` + (date.getMonth() + 1) + `/` + date.getFullYear() + ` ` + date.getHours() + ":" + date.getMinutes();
+
+            let inputFecha = document.getElementById("fecha");
+            inputFecha.value = fecha;
+             
+        }
+
+
+        function cuadrado(){
+            let square = document.getElementById("Cuadrado");
+         
+            square.style.width=square.offsetWidth+10;
+       
+        }
+
+        function cuadrado(){
+            let square = document.getElementById("Cuadrado");
+         
+            square.style.width=square.offsetWidth+10;
+       
+        }
+
+        function color(){
+
+            let square = document.getElementById("botonColor");
+            
+            square.style.background='#'+Math.floor(Math.random()*16777215).toString(16);
+        }
+
+        function colorFondo(){
+            let square = document.getElementById("botonColor");
+            square.style.color='#'+Math.floor(Math.random()*16777215).toString(16);
+        }
+
+
+    </script>
+</HEAD>
+
+<BODY  onload="alcargar();" >
+</BODY>
+
+</HTML>

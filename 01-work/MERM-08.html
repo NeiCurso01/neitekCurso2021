@@ -1,0 +1,50 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+        <script type="text/javascript">
+
+      
+        function fecha() {
+            fecha = Date();
+            document.getElementById('desplegar').innerHTML = fecha;
+        }
+
+        function nombre() {
+            var res = prompt("Escribe tu nombre");
+            document.getElementById('name').innerHTML = res;
+        }
+
+        function cambia() {
+            document.getElementById('btn').style.color='red';
+        }
+
+        function cambia2() {
+            document.getElementById('btn').style.color='yellow';
+        }
+
+        window.onload = function () {
+            nombre();
+            document.getElementById('btn').onclick = cambia;
+            document.getElementById('btn').onmouseover = cambia2;
+            document.getElementById('btnFecha').onclick=fecha;
+        }
+     
+            
+
+    </script>
+</HEAD>
+<BODY>
+    <h1 id="name"></h1>
+    <br />
+    <br />
+    <button id="btnFecha"> Haz Clic </button>
+    <br />
+    <div id="desplegar"> </div>
+    <br />
+    <br />
+    <button id="btn" style="color:black"> Haz Clic y fijate lo que pasa </button>
+
+
+</BODY>
+</HTML>
