@@ -1,0 +1,55 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Ejercicio 2 - DOM </title>
+
+    <script type="text/javascript">
+
+        function agregar() {
+            
+            var ColorNuevo = document.getElementById("color").value;
+            var lista = document.getElementsByTagName("li");
+            var bandera=false;
+            
+            for (i = 0; i < lista.length; i++) {
+                //verificar si el elemento ingresado existe en la lista existente
+                if (lista[i].innerText == ColorNuevo) {
+                    //console.log("Si existe " + i);
+                    bandera = true;
+                }
+            }
+
+            if (bandera) {
+                console.log("El color ya existe");
+            }else{
+                var Nuevo = document.createElement("li");
+                var Texto = document.createTextNode(ColorNuevo);
+                Nuevo.appendChild(Texto);
+                var lista2 = document.getElementById("lista");
+                lista2.appendChild(Nuevo);
+                console.log("Color Añadido");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Colores</h1>
+    <ul id="lista">
+        <li>Amarillo</li>
+        <li>Azul</li>
+        <li>Rojo</li>
+        <li>Verde</li>
+        <li>Naranja</li>
+    </ul>
+
+    <input type="button" value="Agregar color" onclick="agregar();">
+    <input type="text" id="color" required>
+
+
+</body>
+
+</html>

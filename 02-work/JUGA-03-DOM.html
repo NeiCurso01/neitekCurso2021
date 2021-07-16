@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<HEAD>
+    <script type="text/javascript">
+
+        const nombre = "Jesus Uriel Guevara Aguirre";
+        var año = 1998;
+        const date = new Date();
+
+
+
+        let desplegar = (Nombre, Año) => {
+            let n = Nombre;
+            let a = Año;
+            alert("Mi nombre es: " + n + "\n" + "Año de mi nacimiento fue en: " + a);
+        }
+
+        let edad = (Año) => {
+            let e = Año;
+            const fecha_actual = date.getFullYear();
+            alert("Mi edad actual es de: " + (fecha_actual - año) + " años");
+        }
+
+        desplegar(nombre, año);
+        edad(año);
+
+    </script>
+</HEAD>
+
+<BODY>
+</BODY>
+
+</HTML>
