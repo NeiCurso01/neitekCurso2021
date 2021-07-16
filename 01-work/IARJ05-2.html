@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 5-2</title>
+</head>
+<body>
+    <script type="text/javascript">
+    	var tablas = [];
+    	var aux = [];
+
+        function generarTablas(numero){
+           for (var i = 0; i < numero; i++) {
+           	   for (var j = 0; j < 10; j++) {
+           	   	   aux[j] = ((i + 1) * (j + 1)); 
+           	   }
+           	tablas[i] = aux; 
+            aux = [];
+           }
+           mostrarTablas(numero);
+        }
+
+        function mostrarTablas(numero){
+           for (var i = 0; i < numero; i++) {
+               document.writeln("Tabla del " + (i + 1) + "<br/>");
+
+           	   for (var j = 0; j < 10; j++) {
+           	   	   document.writeln((i+1) + " x " + (j+1) + " = " + tablas[i][j] + "<br/>");
+           	   }
+               
+               document.writeln("<br/>");
+           }
+        }
+
+    	var n = prompt("Ingresa el número limite para las tablas de multiplicar")
+      generarTablas(n);
+
+    </script>
+</body>
+</html>

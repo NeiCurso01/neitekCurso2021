@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 14</title>
+</head>
+<body>
+     <script type="text/javascript">
+     	 window.name = "Ejercicio 14";
+     	 document.writeln("Nombre de la ventana: " + window.name + "<br/>");
+     	 document.writeln("Compatible con java: " + navigator.javaEnabled() + "<br/>");
+     	 document.writeln("Nombre del navegador: " + navigator.appName + "<br/>");
+     	 document.writeln("Cookies activadas: " + navigator.cookieEnabled + "<br/>");
+     	 document.writeln("Ancho: " + screen.width + " Altura: " + screen.height + "<br/>");
+     	 document.writeln("URL actual: " + location.href + "<br/>");
+
+     	 function btnUrl(url){
+            window.location.href = document.getElementById("field1").value;
+     	 }
+     </script>
+ 
+     <br/>
+     <input type="button" id="btn1" value="click para regresar a la ultima pagina del historial" onclick="history.back()">
+
+     <br/>
+     <br/> 
+     Ingresa un URL valido: <input type="text" id="field1">
+     <input type="button" id="btn2" value="ir a url" onclick="btnUrl()">
+</body>
+</html>

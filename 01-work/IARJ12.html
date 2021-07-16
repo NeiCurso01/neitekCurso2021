@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 12</title>
+</head>
+<body>
+      <script type="text/javascript">
+           //Pedir nombre al usuario y mostrarlo en un h1
+           window.onload = function (){
+           	  	var nombre = prompt("Ingresa tu nombre:");
+                document.getElementById("nombre").innerText = "Tu nombre es: " + nombre;
+           }
+           
+           //desplegar fecha y hora en un field tras presionar un boton
+      	   var hoy = new Date();
+      	   function setFecha(){
+      	   	   var fecha = hoy.getFullYear() + "-" + (hoy.getMonth() + 1) + "-" + hoy.getDate();
+      	   	   var tiempo = hoy.getHours() + ":" + hoy.getMinutes() + ":" + hoy.getSeconds();
+
+      	   	   var fechaCompleta = fecha + " " + tiempo;
+      	   	   document.getElementById("field1").value = fechaCompleta;
+      	   }
+
+      	   //hacer un cuadro 10px mas ancho cada dobleclick
+           function masAncho(ancho){
+           	  document.getElementById("div2").style.width = (ancho+10) + "px";
+           	  console.log("ancho: "+ document.getElementById("div2").style.width);
+           }
+
+           //cuando el raton pasa por el btn2
+           function entraBtn2(){
+              let btn = document.getElementById("btn2");
+              alterarBoton("blue", "white", "Sal o da click!", btn);
+           }
+
+           function salirBtn2(){
+           	  let btn = document.getElementById("btn2");
+           	  alterarBoton("white", "black", "acerca el mouse!", btn);
+           }
+
+           function clickBtn2(){
+           	  let btn = document.getElementById("btn2");
+           	  alterarBoton("green", "white", "Diste click!", btn);
+           }
+
+           function alterarBoton(colorFondo, colorLetra, texto, boton){
+              boton.style.backgroundColor = colorFondo;
+              boton.style.color = colorLetra;
+              boton.value = texto;
+           }
+
+      </script>
+ 
+      <h1 id="nombre"></h1>
+
+      <input type="button" name="btn1" id="btn1" value="da click!" onclick="setFecha()" />
+      <div>
+      	<input type="text" name="field1" id="field1" readonly="true" />
+      </div>
+
+      <div id="div2" style="width:70px;height: 60px; border:thin solid silver;" ondblclick="masAncho(parseInt(this.style.width))">
+      	  <p>Da doble click!</p>
+      </div>
+
+      <input type="button" id="btn2" value="acerca el mouse!" onmouseover="entraBtn2()" onmouseout="salirBtn2()" onclick="clickBtn2()" style="background-color: white;" />
+</body>
+</html>

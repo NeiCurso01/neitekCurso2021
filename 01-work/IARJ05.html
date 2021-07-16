@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 5</title>
+</head>
+<body>
+      <script type="text/javascript">
+      	  function valorMin(arreglo){
+      	  	var min = arreglo[0];
+      	  	for(var i = 1; i < arreglo.length; i++){
+      	  		if(min > arreglo[i]){
+      	  			min = arreglo[i];
+      	  		}
+      	  	}
+      	  	return min;
+      	  }
+
+      	  var arr = [50, 10, 5, 30, 80, 100];
+      	  alert("El valor mas chico es: " + valorMin(arr));
+      </script>
+</body>
+</html>

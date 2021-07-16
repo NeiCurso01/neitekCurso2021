@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 13</title>
+</head>
+<body>
+     <form name="formulario1">
+     	  Nombre: <input type="text" id="nombre" maxlength="60" onkeypress="return  /^[a-zA-Z\s]*$/i.test(event.key)" onblur="checarNombre()">
+     	  <br/>
+
+     	  <p>Fecha de nacimiento:</p>
+     	  dia: <input type="text" id="dia" maxlength="2" onkeypress="return /^[0-9]*$/i.test(event.key)">
+     	  <br/>
+
+     	  mes: <select id="meses">
+     	  	    <option value="1">Enero</option>
+     	  	    <option value="2">Febrero</option>
+     	  	    <option value="3">Marzo</option>
+     	  	    <option value="4">Abril</option>
+     	  	    <option value="5">Mayo</option>
+     	  	    <option value="6">Junio</option>
+     	  	    <option value="7">Julio</option>
+     	  	    <option value="8">Agosto</option>
+     	  	    <option value="9">Septiembre</option>
+     	  	    <option value="10">Octubre</option>
+     	  	    <option value="11">Noviembre</option>
+     	  	    <option value="12">Diciembre</option>
+     	  </select>
+
+     	  <br/>
+
+     	  año: <input type="text" id="anio" maxlength="4" onkeypress="return /^[0-9]*$/i.test(event.key)">
+
+          <input type="button" id="btn" value="calcular Edad" onclick="calcularEdad()">
+
+          edad: <input type="text" id="edad" readonly="true" />   
+
+          <br/>
+
+          RFC: <input type="text" id="RFC" onfocus="verificar()" />   
+
+          <br/>
+
+          sexo: <input type="radio" name="sexo" value="Masculino" id="masculino" onclick="checarRadiobtn(this.id)">Masculino
+          <input type="radio" name="sexo" value="Femenino" id="femenino" onclick="checarRadiobtn(this.id)"> Femenino    
+          <br/>
+          <p id="radioBtnMensaje"></p>  
+
+          <br/>
+
+          <input type="button" id="btnResumen" value="boton de enviar" onclick="crearResumen()" />
+     </form> 
+
+     <script type="text/javascript">
+     	let dia = document.getElementById("dia");
+        let anio = document.getElementById("anio");
+        let listaMeses = document.getElementById("meses");
+        let indiceMes;
+        let mesSeleccionado;
+        let numeroMes;
+        let nombreMes;
+        let nombre = document.getElementById("nombre");
+        let edad = document.getElementById("edad");
+        let rfc = document.getElementById("RFC");
+        let radioBtnMensaje = document.getElementById("radioBtnMensaje");
+        let rbtn = document.getElementsByName("sexo");
+
+     	//Calcular edad
+     	function calcularEdad(){
+            if(camposFechaNacimiento(dia, anio)){
+            	alert("Alerta, para calcular la edad dia y año no pueden estar vacios.")
+            }else{
+     		    indiceMes = listaMeses.selectedIndex;
+     		    mesSeleccionado = listaMeses.options[indiceMes];
+     		    numeroMes = mesSeleccionado.value;
+     		    nombreMes = mesSeleccionado.text;
+
+     		   
+
+     		    let date = new Date();
+                let edadField = 2021 - anio.value;
+    
+     		    if(numeroMes > (date.getMonth() + 1)){
+                    edadField -= 1;
+     		    }
+
+     		    if(numeroMes == (date.getMonth() + 1) && dia.value > date.getDate()){
+     			    edadField -=1;
+     		    }
+
+               edad.value = edadField;
+           }	
+     	}
+
+     	//Verificar si se ha escrito el nombre
+     	function checarNombre(){
+     		if(nombre.value == "" || /^\s+$/.test(nombre.value)){
+     			alert("Alerta, no puedes dejar el nombre vacio");
+     			nombre.value = "";
+     		}
+     	}
+
+     	//Verificar si todos los campos de fecha de nacimiento estan escritos
+     	function camposFechaNacimiento(dia, anio){
+            if(dia.value == "" || anio.value == ""){
+            	return true;
+            }else{
+            	return false;
+            }
+     	}
+
+     	//Verificar si edad y nombre se han llenado
+     	function verificar(){
+     		if(nombre.value == "" || edad.value == ""){
+     			rfc.value = "Nombre o edad vacios";
+     			rfc.readOnly = true;
+     		}else{
+     			rfc.value = "";
+     			rfc.readOnly = false;
+     		}
+     	}
+        
+        function checarRadiobtn(radiobtn){
+            let btn = document.getElementById(radiobtn);
+ 
+            if(nombre.value == "" || edad.value == ""){
+            	btn.checked = false;
+            	radioBtnMensaje.innerHTML="Alerta, no puedes seleccionar el sexo hasta llenar el campo edad y nombre";
+            }else{
+            	radioBtnMensaje.innerHTML="";
+            }
+        }
+
+        //Validar rfc -USE EL FORMATO OFICAL(NO ES EL QUE VENIA EN EL ENUNCIADO DEL EJERCICIO)
+        function validarRFC(rfc){
+            let formato = /^[A-Z,Ñ,&]{3,4}[0-9]{2}[0-1][0-9][0-3][0-9][A-Z,0-9]?[A-Z,0-9]?[0-9,A-Z]?$/
+            return formato.test(rfc.value);
+        }
+
+        function crearResumen(){
+     		var flag = false;
+     		var todoBien = true;
+     		var seleccion;
+
+     		if(nombre.value == "" || edad.value == ""){
+            	alert("Alerta, no puedes dejar nombre y edad vacios.");
+            	todoBien = false;
+            }
+
+            if(rfc.value != ""){
+                  if(!validarRFC(rfc)){
+                      alert("El rfc no sigue un formato valido");
+                      todoBien = false;
+                  }
+            }
+
+            for (var i = 0; i < rbtn.length; i++) {
+            	if(rbtn[i].checked){
+            		flag = true;
+            		seleccion = rbtn[i].value;
+            	}   
+            }
+
+            if(!flag){
+               alert("Alerta, debes de elegir un sexo.");
+               todoBien = false;
+            }  
+
+            if(todoBien){
+            	alert("Resumen de los datos ingresados: \n\n" + "Nombre: " + nombre.value + "\n" + " Fecha de nacimiento: \n" + "dia: " + dia.value + "\n" + "Mes seleccionado: " + nombreMes + "\n" + "Año: " + anio.value + "\n" + "Edad calculada: " + edad.value + " años\n" + "RFC (Opcional): " + rfc.value + "\n" + "Sexo: " + seleccion);
+            }
+        }
+     </script>
+</body>
+</html>

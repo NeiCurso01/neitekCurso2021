@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 10</title>
+</head>
+<body>
+     <script type="text/javascript">
+     	  var dia = prompt("Ingresa el dia:");
+     	  var mes = prompt("Ingresa el mes:");
+     	  var anio = prompt("Ingresa el año:");
+
+          mes--;
+     	  var date = new Date(anio, mes, dia);
+          var fechas = [];
+
+     	  for (var i = mes; i < (mes+6); i++) {
+     	  	 fechas [i] = new Date(anio, i, dia);
+     	  }
+
+     	  document.writeln(fechas);
+     </script>
+</body>
+</html>

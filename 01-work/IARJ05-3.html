@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 5-3</title>
+</head>
+<body>
+      <script type="text/javascript">
+      	  function modificarCasilla(array){
+      	  	 var arrayAux = array.slice();
+
+      	  	 arrayAux[0] = 25;
+
+      	  	 return arrayAux[0];
+      	  }
+
+      	  var arreglo = [1, 2, 3, 4, 5];
+
+      	  alert("Casilla 0 del arreglo antes de llamar a la funcion: " + arreglo[0]);
+
+          alert("Casilla 0 del arreglo al ser referenciado y modificado en la funcion: " + modificarCasilla(arreglo));
+
+          alert("Casilla 0 del arreglo despues de llamar a la funcion: " + arreglo[0]);
+      </script>
+</body>
+</html>
