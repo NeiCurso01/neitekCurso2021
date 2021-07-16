@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curso Neitek</title>
+</head>
+<body>
+	<h1>Ejemplos JavaScript</h1>
+	<h3>Carlos Arturo Aguilar D.</h3>
+	<div id="eljugador"></div>
+	<div id="demo"></div>
+	<script type="text/javascript">
+		function Persona (nombre, apellido, anioNac) { // prototype
+			this.name = nombre;
+			this.lname = apellido;
+			this.age = new Date().getFullYear() - anioNac;
+		}
+		
+		function Jugador (nombre, apellido, anioNac) {
+			this.__proto__ = new Persona(nombre, apellido, anioNac);
+			this.club = '';
+		}
+		
+		var lio = new Jugador('Lionel','Messi', 1987);
+
+		// setter con prototipos 
+		Object.defineProperty(lio, "equipo", {
+		    set : function (nomEquipo) {
+		        this.club = nomEquipo;
+		    }
+		});
+		// getter con prototipos
+		Object.defineProperty(lio, "mensaje", {
+		    get : function () {
+		    	cadena = '<p><b>Nombre:</b> '+lio.name+' '+lio.lname+'</br>';
+				cadena+= '   <b>Edad:</b>   '+lio.age+'</br>';
+				cadena+= '   <b>Equipo:</b> '+lio.club+'<p>';
+		        return cadena;
+		    }
+		});
+
+		lio.equipo = prompt('En qué equipo juega '+lio.name+' '+lio.lname+'?');
+
+		document.getElementById('eljugador').innerHTML=lio.mensaje;
+		
+	</script>
+</body>
+</html>
