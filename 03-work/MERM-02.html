@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script type="text/javascript">    
+       
+        //Exercise1
+        function student(name, lastName, grade) {
+            this.name = name;
+            this.lastName = lastName;
+            this.grade = grade;
+
+            this.getName = function(){
+                return "Name student: " + this.name;
+            };
+
+            this.printGrade = function(){
+                return "The student grade is: " + this.grade;
+            };
+        };
+
+        var student1 = new student("Julio", "Ramirez", "8");
+        var student2 = new student("Mario", "Perez", "7");
+
+        document.writeln("Ejercicio 1: </br> ");
+        document.writeln(student1.getName() + "</br>");
+        document.writeln(student2.printGrade() + "</br></br>");
+
+        //Exercise2
+        //one way
+          var Person = {
+            name: "No name",
+            lastname: "No lastname",
+            age: "No age",
+
+            getToString: function () {
+                return "Name: " + this.name + "</br>" + "Lastname: " + this.lastname + "</br>" + "Age: " + this.age;
+            },
+            setToString: function (value) {
+                var parts = value.toString().split (", ");
+                this.name = parts[0] || "";
+                this.lastname = parts[1] || "";
+                this.age = parts[2] || "";
+            },
+        }
+        Person.setToString("Maria, Mendez, 19");
+        document.write(Person.getToString() + "<br/><br/>");
+      
+        //two way
+        var Person = {
+            name: "No name",
+            lastname: "No lastname",
+            age: "No age",
+
+            get getToString() {
+                return "Name: " + this.name + "</br>" + "Lastname: " + this.lastname + "</br>" + "Age: " + this.age;
+            },
+
+            set setToString(value){
+                 var parts = value.toString().split (", ");
+                this.name = parts[0] || "";
+                this.lastname = parts[1] || "";
+                this.age = parts[2] || "";
+            }
+
+        }
+        
+        document.write(" Person 2: <br/>");
+        Person.setToString = "Maria, Ramirez, 19";
+        document.write(Person.getToString + "<br/></br>");
+       
+        //three way        
+        var Person = function (name,lastName,age) {
+                this._name = name;
+                this._lastName = lastName;
+                this._age = age;
+            }
+        Person.prototype = {
+            set setToString(value) {
+                var parts = value.toString().split (", ");
+                this._name = parts[0] || "";
+                this._lastName = parts[1] || "";
+                this._age = parts[2] || "";
+            },
+            get getToString() {
+               return "Name: " + this._name + "</br>" + "Lastname: " + this._lastName + "</br>" + "Age: " + this._age;
+           
+            },
+            set name(name) {
+                this._name = name;
+            },
+            set lastName(lastName) {
+                this._lastName = lastName;
+            }
+        }
+
+        var person1 = new Person("Sandra", "Lopez", "23");
+        person1.name = "Ana";
+        document.write(" Person 3: <br/>");
+        document.write( person1.getToString);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
