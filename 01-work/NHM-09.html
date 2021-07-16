@@ -1,0 +1,144 @@
+<HTML>
+
+<HEAD>
+  <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+
+</HEAD>
+
+<BODY>
+
+  <form>
+    <ul>
+      <li>
+        <label for="name">Nombre:</label>
+        <input oninput="block()" type="text" id="name" name="user_name" />
+      </li>
+
+      <li>
+        <label for="fecha_Dia">Día de nacimiento:</label>
+        <input oninput="block()" type="text" id="fecha_Dia" name="fecha_Dia" />
+
+        <label for="fecha_Mes">Mes:</label>
+        <select name="fecha_Mes" id="fecha_Mes">
+
+          <label for="fecha_Anno">Mes:</label>
+          <input oninput="block()" type="text" id="fecha_Anno" name="fecha_Anno" />
+
+
+        </select>
+
+      </li>
+
+      <li>
+        <label for="rfc">RFC:</label>
+        <textarea id="rfc" name="rfc"></textarea>
+      </li>
+      <li>
+
+        <label for="sexo">Sexo:</label><br>
+          <input type="radio" id="Masculino" name="sexo" value="Masculino">
+          <label for="html">Masculino</label><br>
+          <input type="radio" id="Femenino" name="sexo" value="Femenino">
+          <label for="css">Femenino</label><br>
+         
+
+      </li>
+
+    </ul>
+
+
+    <input type="button" value="Aceptar" onclick="validar();">
+
+  </form>
+  <script>
+    let nombre = document.getElementById('name');
+
+    let dia = document.getElementById('fecha_Dia');
+
+    let mes = document.getElementById('fecha_Mes');
+
+    let anno = document.getElementById('fecha_Anno');
+
+    let rfc = document.getElementById('rfc');
+
+    let sexoM = document.getElementById('Masculino');
+    let sexoF = document.getElementById('Femenino');
+
+    let meses = document.getElementById('fecha_Mes');
+
+    for (let i = 1; i <= 12; i++) {
+
+      // create new option element
+      var opt = document.createElement('option');
+
+      // create text node to add to option element (opt)
+      opt.appendChild(document.createTextNode(i));
+
+      // set value property of opt
+      opt.value = i;
+
+      // add opt to end of select box (sel)
+      meses.appendChild(opt);
+    }
+    block();
+
+    function block() {
+
+
+      if (nombre.value == "" || dia.value == "" || mes.value == "" || anno.value == "") {
+
+        rfc.disabled = true;
+        sexoM.disabled = true;
+        sexoF.disabled = true;
+      } else {
+        rfc.disabled = false;
+        sexoM.disabled = false;
+
+        sexoF.disabled = false;
+      }
+
+
+    }
+
+    function validar() {
+
+      if (nombre.value.length > 60 || nombre.value.match(/^[a-zA-Z]+$/) == null) {
+        alert("El nombre no puede sobrepasar 60 caracteres o tener numeros");
+      } else if (dia.value.match(/^[0-9]{1,3}$/) == null) {
+        alert("El dia solo puede contener numeros");
+      } else if (sexoM.checked == false && sexoF.checked == false) {
+        alert("Debes selecionar un sexo");
+      } else if (anno.value.match(/^[0-9]{4}$/) == null) {
+        alert("Año incorrecto");
+      }
+      else if (rfc.value != "") {
+
+        let expresion = /^([A-ZÑ&]{3,4}) ?(?:- ?)?(\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])) ?(?:- ?)?([A-Z\d]{2})([A\d])$/;
+
+        if (rfc.value.match(expresion) == null) {
+          alert("RFC INVALIDO");
+        }
+
+
+      } else {
+        let sexoS;
+        if (sexoF.checked) {
+          sexoS = sexoF.value;
+        } else {
+          sexoS = sexoM.value;
+        }
+
+        alert(`Resumen de los datos:\n ${nombre.value}\n ${dia.value} ${mes.value} ${anno.value}\n ${rfc.value}\n ${sexoS}\n `)
+      }
+
+
+
+
+    }
+
+
+  </script>
+
+</BODY>
+
+</HTML>
