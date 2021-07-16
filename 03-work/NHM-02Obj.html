@@ -1,0 +1,73 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script>
+
+        let student1 = {
+            name: "Nelson",
+            lastName: "Hernández",
+            grade: "9°"
+        }
+
+        let student2 = {
+            name: "Marciano",
+            lastName: "Pérez",
+            grade: "8°"
+        }
+
+        function printGrade(objeto) {
+            console.log(objeto.grade);
+        }
+
+
+        function getName(objeto) {
+            console.log(objeto.name);
+        }
+
+        getName(student1);
+        printGrade(student1);
+
+
+        getName(student2);
+        printGrade(student2);
+
+        let person = {
+            name: "Pedro",
+            lastName: "Suarez",
+            age: 23
+        }
+
+        //set
+        let person2 = new Object();
+        person2.name = "Juan";
+        person2.lastName = "Jimenez";
+        person2.age = 23;
+
+        //set
+        function persona(nombre, apellido, edad) {
+            this.name = nombre;
+            this.lastName = apellido;
+            this.age = edad;
+
+        }
+
+
+         
+ 
+
+        let personass = new persona("Juan", "Perez", 33);
+
+        console.log(personass);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
