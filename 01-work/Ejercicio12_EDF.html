@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio12_JS_EDF</title>
+	<script type="text/javascript">
+
+		var day = prompt("Ingresa el día");
+		var month = prompt("Ingresa el mes");
+		var year =  prompt("Ingresa el año");
+		var myDate = [];
+
+		
+		function AgendarFuturasCitas (year, month, day){
+			for (var i = 0; i < 6; i++) {
+				myDate[i] = new Date(year,month+i,day);
+				console.log (myDate[i] +'<br/>');
+		
+			}
+
+		}
+		AgendarFuturasCitas(year, month, day)
+
+				
+	</script>
+</head>
+<body>
+
+</body>
+</html>

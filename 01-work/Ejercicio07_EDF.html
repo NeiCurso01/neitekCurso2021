@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 07_ EDF</title>
+	<script type="text/javascript">
+
+		var valorMax;
+		var arrMultiplicador=[];
+
+	
+		valorMax = prompt("Ingresa el valor máximo de la tabla que desea obtener")
+
+		function TablaMultiplicar(valorMax){
+			for (var i = 0; i <= valorMax ; i++) {
+				arrMultiplicador[i]=[]
+				for (var j = 0; j <= valorMax; j++) {
+					arrMultiplicador[i][j] = j*i;
+				}
+				document.writeln(arrMultiplicador[i]+'<br>');
+			}
+		
+		}	
+		TablaMultiplicar(valorMax);
+
+	
+	</script>
+</head>
+<body>
+
+</body>
+</html>
